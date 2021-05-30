@@ -4,7 +4,7 @@ using OpenDBDiff.SqlServer.Schema.Generates;
 using OpenDBDiff.SqlServer.Schema.Model;
 using OpenDBDiff.SqlServer.Schema.Options;
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 
@@ -96,9 +96,7 @@ namespace OpenDBDiff.CLI
             }
             catch (Exception ex)
             {
-                string newIssueUri = System.Configuration.ConfigurationManager.AppSettings["OpenDBDiff.NewIssueUri"];
-                if (string.IsNullOrEmpty(newIssueUri))
-                    newIssueUri = "https://github.com/OpenDBDiff/OpenDBDiff/issues/new";
+                string newIssueUri = "https://github.com/OpenDBDiff/OpenDBDiff/issues/new";
 
                 Console.WriteLine($"{ex.Message}\r\n{ex.StackTrace}\r\n\r\nPlease report this issue at {newIssueUri}.");
                 Console.WriteLine();

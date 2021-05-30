@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Text;
 using OpenDBDiff.SqlServer.Schema.Model;
 
@@ -73,7 +73,7 @@ namespace OpenDBDiff.SqlServer.Schema.Generates
                                         item.Values.Add(reader["value"].ToString());
                                         break;
                                 }
-                                    
+
                             }
                         }
                     }

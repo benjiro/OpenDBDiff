@@ -3,7 +3,7 @@ using OpenDBDiff.Abstractions.Schema.Model;
 using OpenDBDiff.SqlServer.Schema.Generates.SQLCommands;
 using OpenDBDiff.SqlServer.Schema.Generates.Util;
 using OpenDBDiff.SqlServer.Schema.Model;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace OpenDBDiff.SqlServer.Schema.Generates
 {
@@ -255,7 +255,7 @@ namespace OpenDBDiff.SqlServer.Schema.Generates
 
                             if (table != null)
                             {
-                                if ((lastId != (int)reader["Index_id"]) || (change)) 
+                                if ((lastId != (int)reader["Index_id"]) || (change))
                                 {
                                     con = new Constraint(table, database.Options.Ignore.FilterIndex);
                                     con.Id = (int)reader["Index_id"];

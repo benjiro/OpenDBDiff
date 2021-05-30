@@ -2,7 +2,7 @@ using OpenDBDiff.Abstractions.Schema.Events;
 using OpenDBDiff.Abstractions.Schema.Model;
 using OpenDBDiff.SqlServer.Schema.Generates.Util;
 using OpenDBDiff.SqlServer.Schema.Model;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace OpenDBDiff.SqlServer.Schema.Generates
 {
